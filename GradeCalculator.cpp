@@ -1,6 +1,9 @@
 #include <iostream>
 #include <iomanip>
-
+/*
+ -> implement input for asking subject name and outout the credit for each induvidual subject
+ -> 
+*/
 
 int main()
 {
@@ -8,10 +11,12 @@ int main()
     float credit, GradePoint;
     float totalCredits = 0;
     float totalGradePoints = 0;
-    std :: cout << std :: setprecision(0);
-    std :: cout << "==============================\n";
-    std :: cout << "       CGPA CALCULATOR\n";
-    std :: cout << "==============================\n";
+
+    std :: cout << std :: setprecision(0); 
+    std :: cout << "**********************************************************************************\n";
+    std :: cout << "       \t\t\t\tCGPA CALCULATOR\n";
+    std :: cout << "**********************************************************************************\n";
+
 
     std :: cout << "Enter the number of subjects: ";
     std :: cin >> n;
@@ -32,13 +37,22 @@ int main()
 
     float cgpa = totalGradePoints / totalCredits;
 
-    std :: cout << "\n==============================\n";
+    std :: cout << "\n================================================================================\n";
     std :: cout << std :: fixed << std :: setprecision(2);
 
-    std :: cout << "Total Credits      : " << totalCredits << std :: endl;
-    std :: cout << "CGPA               : " << cgpa << std :: endl;
+    
+    std :: cout << "Total Credits      : ";
 
-    std :: cout << "==============================\n";
+    
+    std :: cout << totalCredits << std :: endl;
+
+    
+    std :: cout << "CGPA               : ";
+
+    
+    std :: cout << cgpa << std :: endl;
+
+    std :: cout << "\n================================================================================\n";
 
     return 0;
 }

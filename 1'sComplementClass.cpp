@@ -64,18 +64,29 @@ void binary :: PutData(void){
 }
 
 int main (){
+/*
+implement easioer code reading by spacing and indenting:
 
+*/
     std :: string userIP;
+    
+    
     do {
     binary b;
     b.GetData();
     b.PutData();
+
+
     std :: cout << std :: endl << "Enter 'exit' to terminate the program or 'enter' to continue : ";
     std :: cin >> userIP;
-        if (userIP == "exit") {
+
+
+        if (userIP == "exit") 
+        {
             std::cout << "Exiting the program..." << std::endl;
             break;
         }
+        
         else if(userIP == "enter")
         {
             std::cout << "Continuing the program..." << std::endl;
