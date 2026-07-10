@@ -1,13 +1,15 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 /*
  -> implement input for asking subject name and outout the credit for each induvidual subject
- -> 
+ -> output each subject with it's respective credits earned
 */
 
 int main()
 {
     int n;
+    std :: string subjectName[n];
     float credit, GradePoint;
     float totalCredits = 0;
     float totalGradePoints = 0;
@@ -23,6 +25,8 @@ int main()
 
     for (int i = 1; i <= n; i++)
     {
+        std :: cout << "Enter the name of the subject - "<< i ;
+        std :: cin >> subjectName[i]; 
         std :: cout << "\nSubject " << i << std :: endl;
 
         std :: cout << "Enter Credit: ";
@@ -33,7 +37,7 @@ int main()
 
         totalCredits += credit;
         totalGradePoints += credit * GradePoint;
-    }
+    }std :: cout << std :: endl << std :: endl;
 
     float cgpa = totalGradePoints / totalCredits;
 
@@ -41,13 +45,13 @@ int main()
     std :: cout << std :: fixed << std :: setprecision(2);
 
     
-    std :: cout << "Total Credits      : ";
+    std :: cout << "\t\t\tTotal Credits      : ";
 
     
     std :: cout << totalCredits << std :: endl;
 
     
-    std :: cout << "CGPA               : ";
+    std :: cout << "\t\t\tCGPA               : ";
 
     
     std :: cout << cgpa << std :: endl;
