@@ -40,7 +40,7 @@ int main(){
     std :: cout << "COST" << std :: endl;
 
     std :: cout.setf(std :: ios :: showpoint);      // display trailing zeroes...
-    std :: cout.fill('-');
+    std :: cout.fill('-');                          // filling '-' in the empty spaces...
 
     for ( int j = 1; j <= n; j++)
     {
