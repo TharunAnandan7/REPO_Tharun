@@ -41,10 +41,10 @@ int main()
 
     float cgpa = totalGradePoints / totalCredits;
 
-    std :: cout << "\n================================================================================\n";
     std :: cout << std :: fixed << std :: setprecision(2);
 
-    
+    std :: cout << "\n================================================================================\n";
+
     std :: cout << "\t\t\tTotal Credits      : ";
 
     
@@ -60,3 +60,33 @@ int main()
 
     return 0;
 }
+
+/*
+required output:
+                                        CGPA CALCULATOR:
+
+Enter the number of subjects: 3
+
+Enter the name of the subject- 1: Subject1
+Subject- 1: Subject1
+Enter credit : CerditNum
+Enter grade point (0 - 10): GradePoint
+
+
+Subject - 1: subject1
+credit : CreditNum
+Grade Point: GradePoint
+        .
+        .
+        .
+        for upto n number of subjects...
+
+======================================================
+                Total Credits: Credit_total
+                CGPA : Total_GPA
+======================================================
+*/
+
+
+
+
