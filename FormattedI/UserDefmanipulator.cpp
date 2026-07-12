@@ -10,9 +10,9 @@ std :: ostream & indent( std :: ostream & output){
 }
 int main (){
     std :: string UserName;
-    UserName = "Tharun The KinG";
-    std :: cout << indent <<"I am the one who gets the humanoid robots to get mass produced in India" 
+    UserName = "Tharun Anandan";
+    std :: cout << indent <<"Testing the code of User Defined Manipulator... "  
                 <<UserName<< indent;
-                
+    
     return 0;
 }
