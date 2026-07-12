@@ -13,6 +13,8 @@ int main (){
     UserName = "Tharun Anandan";
     std :: cout << indent <<"Testing the code of User Defined Manipulator... "  
                 <<UserName<< indent;
+                
     
+
     return 0;
 }
