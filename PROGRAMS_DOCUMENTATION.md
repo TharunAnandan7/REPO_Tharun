@@ -11,6 +11,7 @@ This document provides comprehensive documentation for all programs saved in the
 3. [Book Shelf (Formatted I/O)](#book-shelf-formatted-io)
 4. [User Defined Manipulator](#user-defined-manipulator)
 5. [Deletion of Repeats](#deletion-of-repeats)
+6. [Mobile Contacts with Hash Map](#mobile-contacts-with-hash-map)
 
 ---
 
@@ -243,6 +244,37 @@ Data Structure:
 
 ---
 
+## Mobile Contacts with Hash Map
+
+### File: `MobileContactsHashMap.cpp`
+
+**Purpose:**  
+Demonstrates using a C++ `std::unordered_map` to store and manage a mobile contact list with add, search, remove, and display operations.
+
+**Key Features:**
+- **Hash map storage**: Uses `std::unordered_map` for fast contact lookup by name
+- **Interactive menu**: Provides a console menu for add/search/remove/display operations
+- **Input validation**: Verifies that contact names are non-empty and mobile numbers contain only digits
+- **Contact management**: Supports adding new contacts, searching by name, removing contacts, and listing all entries
+
+**How It Works:**
+1. User selects an operation from a menu
+2. Program reads the contact name and number when needed
+3. Mobile numbers are validated for digits only
+4. Lookup, insertion, and removal use the underlying hash map
+5. Results are displayed immediately to the user
+
+**Example Usage:**
+```
+Enter contact name: John Doe
+Enter mobile number: 9876543210
+Contact added: John Doe -> 9876543210
+Enter name to search: John Doe
+Found contact: John Doe -> 9876543210
+```
+
+---
+
 ## Repository Structure
 
 ```
@@ -251,6 +283,7 @@ REPO_Tharun/
 ├── GradeCalculator.cpp             [CGPA Calculator - Complete]
 ├── GradeCalculator.exe             [Compiled Binary]
 ├── OnesComplement_Class.exe        [Compiled Binary]
+├── MobileContactsHashMap.cpp       [Mobile Contacts Hash Map - Complete]
 ├── README.md                        [Original README]
 ├── PROGRAMS_DOCUMENTATION.md       [This File]
 └── FormattedI/
