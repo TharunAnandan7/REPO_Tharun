@@ -74,7 +74,7 @@ int main() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         if (choice == 5) {
-            std::cout << "Exiting phonebook." << std::endl;
+            std::cout << "Terminating phonebook." << std::endl;
             break;
         }
 

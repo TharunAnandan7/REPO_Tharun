@@ -77,7 +77,10 @@ implement easioer code reading by spacing and indenting:
     b.PutData();
 
 
-    std :: cout << std :: endl << "Enter 'exit' to terminate the program or 'enter' to continue : ";
+    std :: cout << std :: endl << "Type 'enter' to loop the program or 'exit' to terminate : ";
+    if (userIP != "enter" || userIP != "exit"){
+        std :: cout << "\nInvalid user input, please try again..." << std :: endl;
+    }
     std :: cin >> userIP;
 
 
