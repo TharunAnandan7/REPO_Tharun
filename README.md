@@ -95,12 +95,6 @@ Mobile Contacts using Hash Map
 5. Exit
 ```
 
-## Suggested improvements (optional)
-
-- Replace variable-length arrays with `std::vector` for safety and portability.
-- Remove compiled .exe files from source control and add a simple Makefile or CMakeLists.txt to standardize builds.
-- Complete `DeletionOfRepeats.cpp` and add small unit or manual tests for each program.
-
 ---
 
 Author: TharunAnandan7
