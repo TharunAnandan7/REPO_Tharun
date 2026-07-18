@@ -1,76 +1,106 @@
-//                          PROGRAM TO DEMONSTRATE ONE'S COMPLEMENT BY CLASSES
-# include <iostream>
-# include <string>
+# REPO_Tharun
 
-class binary{
+A collection of small, self-contained C++ teaching programs that demonstrate basic-to-intermediate language concepts (classes, formatted I/O, manipulators, and containers). These console examples are intended for learners practicing C++ fundamentals.
 
-    private :
-    std :: string s;
+## Stack
 
-    public :
-    void GetData (void);                   //function
-    void CheckData(void);
-    void ComplementData(void);             //declaration
-    void PutData(void);
+- **Language:** C++
+- **Runtime / Standard library:** Standard C++ (iostream, string, iomanip, unordered_map)
 
-};
+## Repository layout
 
-//function definitions :
-void binary :: GetData (void){
+```
+REPO_Tharun/
+  .vscode/                          (editor settings)
+  1'sComplementClass.cpp            (One's-complement using a class)
+  GradeCalculator.cpp               (CGPA/grade calculator)
+  GradeCalculator.exe               (Windows binary)
+  MobileContactsHashMap.cpp         (contacts demo using unordered_map)
+  MobileContactsHashMap.exe         (Windows binary)
+  NoOfDaysInMonth.cpp               (small utility/example)
+  OnesComplement_Class.exe          (Windows binary of complement program)
+  PROGRAMS_DOCUMENTATION.md        (detailed documentation for each program)
+  README.md                         (this file)
+  FormattedIO_Programs/             (formatted I/O examples)
+    BookShelf.cpp                   (formatted table output example)
+    BookShelf.exe                   (Windows binary)
+    UserDefmanipulator.cpp          (custom stream manipulator example)
+    UserDefmanipulator.exe          (Windows binary)
+    DeletionOfRepeats.cpp           (in-progress deduplication example)
+```
 
-    std :: cout << "Enter a binary number :";
-    std :: cin >> s;
+## What this is
 
-}
-void binary :: CheckData(void){
+A set of concise example programs that each demonstrate a specific C++ concept (e.g., classes and member functions, formatted input/output, stream manipulators, and use of unordered_map). Each .cpp is a standalone console program; many have matching Windows .exe binaries included.
 
-    for (int i = 0; i < s.length(); i++){
+## How to build and run
 
-        if (s.at(i) != '0' && s.at(i) != '1'){
+Prerequisite: a C++ compiler (g++, clang, or MSVC).
 
-            std :: cout << std :: endl << "The entered number is non-binary, the code exits..."; 
-            exit (0);
+Build individual programs (examples):
 
-        }
-    
-    }
-    std :: cout << std :: endl << "The entered number is binary...";
+```bash
+# One's Complement (source file name includes an apostrophe)
+g++ "1'sComplementClass.cpp" -o OnesComplement
 
-}
-void binary :: ComplementData(void){
+# Grade Calculator
+g++ GradeCalculator.cpp -o GradeCalculator
 
-    CheckData(); // Member function nesting
+# Book Shelf (formatted I/O)
+g++ FormattedIO_Programs/BookShelf.cpp -o BookShelf
 
-    for (int  i = 0; i < s.length(); i++){
+# User Defined Manipulator
+g++ FormattedIO_Programs/UserDefmanipulator.cpp -o UserDefmanipulator
 
-        if (s.at(i) == '0')
+# Mobile Contacts
+g++ MobileContactsHashMap.cpp -o MobileContactsHashMap
+```
 
-            s.at(i) = '1';
-        
-            
-        else
+Run (Linux/macOS):
 
-            s.at(i) = '0';
-    
-        }
+```bash
+./OnesComplement
+./GradeCalculator
+./BookShelf
+./UserDefmanipulator
+./MobileContactsHashMap
+```
 
-}
-void binary :: PutData(void){
+On Windows you can run the included .exe files directly (for example, `GradeCalculator.exe`).
 
-    ComplementData(); // Member function nesting
-    std :: cout << std :: endl << "The one's complement of the entered binary number is " << s;
+## Notes and caveats
 
-}
+- Some source files currently use array declarations dependent on a runtime value (e.g., `std::string Bname[n];` where `n` is read at runtime). These are not standard C++ and will not compile with all compilers; consider converting such arrays to `std::vector` before compiling.
+- `FormattedIO_Programs/DeletionOfRepeats.cpp` is noted in the documentation as under development and may be incomplete.
+- The repository is intended as educational examples rather than production-ready applications.
 
-int main (){
-    /*user willing to get the output once and the entire program to get recurred by using a key-string as the entire program to get used as many times as necessary */
+## Quick examples
 
-    std::string input;
+One's complement example (interactive):
 
-    binary b;
-    b.GetData();
-    b.PutData();
-    
-    return 0;
+```
+Enter a binary number: 1010
+The entered number is binary...
+The one's complement of the entered binary number is 0101
+```
 
-}
+Mobile contacts example (interactive menu):
+
+```
+Mobile Contacts using Hash Map
+1. Add contact
+2. Search contact by name
+3. Remove contact
+4. Display all contacts
+5. Exit
+```
+
+## Suggested improvements (optional)
+
+- Replace variable-length arrays with `std::vector` for safety and portability.
+- Remove compiled .exe files from source control and add a simple Makefile or CMakeLists.txt to standardize builds.
+- Complete `DeletionOfRepeats.cpp` and add small unit or manual tests for each program.
+
+---
+
+Author: TharunAnandan7
