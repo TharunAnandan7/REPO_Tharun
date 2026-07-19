@@ -1,6 +1,6 @@
 # REPO_Tharun
 
-A collection of small, self-contained C++ teaching programs that demonstrate basic-to-intermediate language concepts (classes, formatted I/O, manipulators, and containers). These console examples are intended for learners to read, compile, and run to see how common C++ idioms work.
+A collection of small, self-contained C++ programs that demonstrate basic-to-intermediate language concepts (classes, formatted I/O, manipulators, and containers). These console examples are intended for learners to read, compile, and run to see how common C++ idioms work.
 
 ## Stack
 
