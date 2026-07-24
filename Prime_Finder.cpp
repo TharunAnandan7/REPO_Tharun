@@ -48,13 +48,13 @@ int main() {
     using std::chrono::duration;
     using std::chrono::milliseconds;
     int StartPoint;
-    int EndPoint;
+    int Endpoint;
     std :: cout<< "Enter Starting Number: ";
     std :: cin >> StartPoint;
     std :: cout << "Enter ending number: ";
-    std :: cin >> EndPoint;
+    std :: cin >> Endpoint;
     auto t1 = high_resolution_clock::now();
-    NoOfPrimes(StartPoint, EndPoint);
+    NoOfPrimes(StartPoint, Endpoint);
     auto t2 = high_resolution_clock::now();
     duration<double, std::milli> ms_double = t2 - t1;
     std :: cout << "\n[Execution Time: " << ms_double.count() << "ms]\n" << std :: endl;
